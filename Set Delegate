@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http.Headers;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Delegate
+{
+    class Program
+    {
+        public delegate void MyDelegate(String msg); // declare a delegate
+        // set target method
+        MyDelegate del = MethodA;
+         
+        // target method
+        static void MethodA(string message)
+        {
+            Console.WriteLine(message);
+        }
+    }
+}
+    
